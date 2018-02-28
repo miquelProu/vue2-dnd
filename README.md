@@ -11,6 +11,8 @@
 ```
 npm install miquelProu/vue2-dnd --save
 cd node_modules/vue2-dnd
+npm install
+npm run build
 ```
 
 ## Usage
