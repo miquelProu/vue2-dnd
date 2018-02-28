@@ -78,8 +78,9 @@ DnD.install = (Vue) => {
       const dragEnter = (ev) => {
         if (ev.preventDefault) ev.preventDefault()
         if (ev.stopPropagation) ev.stopPropagation()
+        const vData = ev.dataTransfer.getData('data')
         ev.target.classList.add('dragover')
-        binding.value.call(el)
+        binding.value.call(el, vData)
       }
       el.addEventListener('dragenter', dragEnter)
     },
@@ -93,7 +94,8 @@ DnD.install = (Vue) => {
       const dragLeave = (ev) => {
         if (ev.preventDefault) ev.preventDefault()
         if (ev.stopPropagation) ev.stopPropagation()
-        binding.value.call(el)
+        const vData = ev.dataTransfer.getData('data')
+        binding.value.call(el, vData)
       }
       el.addEventListener('dragleave', dragLeave)
     },
