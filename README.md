@@ -10,10 +10,8 @@
 ## Installation
 ```
 npm install miquelProu/vue2-dnd --save
-cd node_modules/vue2-dnd
-npm install
-npm run build
 ```
+Be patient
 
 ## Usage
 ```javascript
@@ -52,6 +50,48 @@ v-droppable.[groupname]="[droppable callback function]"
 ```
 <template>
   <div v-droppable.groupname="callback"></div>
+</template>
+
+<script>
+  export default {
+    methods: {
+      callback ($ev) {
+        // $ev contains the draggable object
+      }
+    }
+  }
+</script>
+```
+
+### DragEnter Directive
+```
+v-dragenter.[groupname]="[dragenter callback function]"
+```
+
+```
+<template>
+  <div v-dragenter.groupname="callback"></div>
+</template>
+
+<script>
+  export default {
+    methods: {
+      callback ($ev) {
+        // $ev contains the draggable object
+      }
+    }
+  }
+</script>
+```
+
+### DragLeave Directive
+```
+v-dragleave.[groupname]="[dragleave callback function]"
+```
+
+```
+<template>
+  <div v-dragleave.groupname="callback"></div>
 </template>
 
 <script>
