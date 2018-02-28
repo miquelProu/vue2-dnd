@@ -20,6 +20,10 @@ import Vue2Dnd from 'vue2-dnd'
 Vue.use(Vue2Dnd)
 ```
 
+## Fork
+Add two more directives, DragEnter and DragLeave.
+When a draged item enter or leave to droppable element.
+
 ### Draggable Directive
 ```
 v-draggable.[groupname]="[draggable object]"
